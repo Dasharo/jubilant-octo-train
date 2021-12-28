@@ -6,7 +6,7 @@ set -e
 
 git clone https://review.coreboot.org/coreboot.git
 cd coreboot
-git checkout c004ae565609d61dd1de739953f64060c2350fb3
+git checkout 4.15
 cd util/superiotool
 make install
 cd -
