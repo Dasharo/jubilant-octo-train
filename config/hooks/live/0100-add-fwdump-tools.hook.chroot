@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+# Install coreboot tools
+
+git clone https://review.coreboot.org/coreboot.git
+cd coreboot
+git checkout c004ae565609d61dd1de739953f64060c2350fb3
+cd util/superiotool
+make install
+cd -
+cd util/inteltool
+make install
+cd -
+cd util/ectool
+make install
+cd -
+cd util/msrtool
+./configure
+make install
+cd -
+cd util/nvramtool
+make install
+cd -
+cd util/intelp2m
+make 
+cp intelp2m /usr/local/sbin/
+cd -
