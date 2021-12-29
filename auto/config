@@ -7,5 +7,4 @@ lb config noauto \
      --mirror-bootstrap http://ftp.pl.debian.org/debian/ \
      --mirror-binary http://ftp.pl.debian.org/debian/ \
      --apt-indices false \
-     --apt-recommends false \
 	"${@}"
