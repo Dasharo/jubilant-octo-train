@@ -2,7 +2,7 @@
 
 set -e
 
-# Install coreboot tools
+# Install coreboot utils
 
 git clone https://review.coreboot.org/coreboot.git
 cd coreboot
@@ -27,3 +27,16 @@ cd util/intelp2m
 make 
 cp intelp2m /usr/local/sbin/
 cd -
+cd util/cbfstool
+make install
+cd -
+cd ..
+rm -rf coreboot
+
+# Install UEFITool
+git clone https://github.com/LongSoft/UEFITool.git -b new_engine
+cd UEFITool
+./unixbuild.sh
+install UEFIExtract/UEFIExtract /usr/local/bin
+cd -
+rm -rf UEFITool
