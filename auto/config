@@ -6,5 +6,6 @@ lb config noauto \
      --binary-images netboot \
      --mirror-bootstrap http://ftp.pl.debian.org/debian/ \
      --mirror-binary http://ftp.pl.debian.org/debian/ \
-     --apt-indices false
+     --apt-indices false \
+     --apt-recommends false \
 	"${@}"
