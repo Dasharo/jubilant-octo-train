@@ -49,6 +49,8 @@ firmware. jubilant-octo-train project includes following tools:
 
 jubilant-octo-train also contain UEFIExtract provided by [LongSoft/UEFITool](https://github.com/LongSoft/UEFITool).
 
+# Demo
+
 ## Supported hardware
 
 ### Dell OptiPlex 7010/9010 SFF
@@ -59,7 +61,29 @@ Project use set ofa`live-build` scripts to build custom Debian Live that can be
 network booted using [iPXE](https://ipxe.org/). Build process produce
 `vmlinuz`, `initrd` and `filesystem.squashfs`.
 
+## Requirements
+
+* Debian 11
+* Packages
+  ```shell
+  sudo apt install live-build
+  ```
+
 ## Usage
+
+```shell
+git clone https://github.com/Dasharo/jubilant-octo-train.git
+cd jubilant-octo-train
+lb config
+sudo lb build
+```
+
+Build results will be available:
+* `binary/live/filesystem.squashfs`
+* `tftpboot/live/vmlinuz`
+* `tftpboot/live/initrd.img`
+
+### Booting over iPXE
 
 ## Roadmap
 
